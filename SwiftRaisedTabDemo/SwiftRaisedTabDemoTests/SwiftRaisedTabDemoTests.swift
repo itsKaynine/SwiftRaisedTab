@@ -2,8 +2,8 @@
 //  SwiftRaisedTabDemoTests.swift
 //  SwiftRaisedTabDemoTests
 //
-//  Created by Kaynine on 9/23/2558 BE.
-//  Copyright (c) 2558 Kaynine. All rights reserved.
+//  Created by Kaynine on 9/23/2015 BE.
+//  Copyright (c) 2015 Kaynine. All rights reserved.
 //
 
 import UIKit

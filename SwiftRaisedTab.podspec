@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftRaisedTab"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "SwiftRaisedTab recreates raised center tab item seen in many social networking apps."
   s.description      = <<-DESC
                        SwiftRaisedTab is a simple library written in Swift that recreates raised center tab item seen in many social networking apps.
