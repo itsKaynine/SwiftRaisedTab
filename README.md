@@ -20,15 +20,18 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'SwiftRaisedTab', '~> 0.1.2'
+pod 'SwiftRaisedTab', '~> 0.1.3'
 ```
 
 ## Usage
+
+> Note: Working example can be found in the Demo project
 
 Subclass RaisedTabBarController and implement the following in `viewWillAppear` and `onRaisedButton`.
 
 ```swift
 import UIKit
+import SwiftRaisedTab
 
 class ViewController: RaisedTabBarController {
 

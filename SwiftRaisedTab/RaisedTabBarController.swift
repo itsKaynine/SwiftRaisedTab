@@ -13,7 +13,7 @@ public class RaisedTabBarController: UITabBarController {
         super.viewDidLoad()
     }
     
-    func insertEmptyTabItem(title: String, atIndex: Int) {
+    public func insertEmptyTabItem(title: String, atIndex: Int) {
         var vc = UIViewController()
         vc.tabBarItem = UITabBarItem(title: title, image: nil, tag: 0)
         vc.tabBarItem.enabled = false
@@ -21,7 +21,7 @@ public class RaisedTabBarController: UITabBarController {
         self.viewControllers?.insert(vc, atIndex: atIndex)
     }
     
-    func addRaisedButton(buttonImage: UIImage?, highlightImage: UIImage?) {
+    public func addRaisedButton(buttonImage: UIImage?, highlightImage: UIImage?) {
         if let buttonImage = buttonImage {
             var button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
             button.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleBottomMargin | UIViewAutoresizing.FlexibleTopMargin
@@ -47,7 +47,7 @@ public class RaisedTabBarController: UITabBarController {
         }
     }
     
-    func onRaisedButton(sender: UIButton!) {
+    public func onRaisedButton(sender: UIButton!) {
         
     }
 }
