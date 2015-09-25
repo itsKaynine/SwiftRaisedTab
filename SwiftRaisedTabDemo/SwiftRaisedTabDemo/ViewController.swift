@@ -27,7 +27,7 @@ class ViewController: RaisedTabBarController {
         self.insertEmptyTabItem("", atIndex: 2)
         
         // Raise the center button with image
-        var img = UIImage(named: "icon_camera")
+        let img = UIImage(named: "icon_camera")
         self.addRaisedButton(img, highlightImage: nil)
     }
     
@@ -35,7 +35,7 @@ class ViewController: RaisedTabBarController {
     override func onRaisedButton(sender: UIButton!) {
         super.onRaisedButton(sender)
         
-        println("Center button tapped")
+        print("Raised button tapped")
     }
 
 

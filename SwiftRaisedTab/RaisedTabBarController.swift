@@ -14,7 +14,7 @@ public class RaisedTabBarController: UITabBarController {
     }
     
     public func insertEmptyTabItem(title: String, atIndex: Int) {
-        var vc = UIViewController()
+        let vc = UIViewController()
         vc.tabBarItem = UITabBarItem(title: title, image: nil, tag: 0)
         vc.tabBarItem.enabled = false
         
@@ -23,8 +23,8 @@ public class RaisedTabBarController: UITabBarController {
     
     public func addRaisedButton(buttonImage: UIImage?, highlightImage: UIImage?) {
         if let buttonImage = buttonImage {
-            var button = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-            button.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleBottomMargin | UIViewAutoresizing.FlexibleTopMargin
+            let button = UIButton(type: UIButtonType.Custom)
+            button.autoresizingMask = [UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleTopMargin]
             
             button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height)
             button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)

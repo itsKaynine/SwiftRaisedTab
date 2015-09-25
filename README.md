@@ -20,14 +20,14 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'SwiftRaisedTab', '~> 0.1.3'
+pod 'SwiftRaisedTab', '~> 0.2.0'
 ```
 
 ## Usage
 
-> Note: Working example can be found in the Demo project
-
 Subclass RaisedTabBarController and implement the following in `viewWillAppear` and `onRaisedButton`.
+
+> To link to storyboard, drag a new TabBarController into the storyboard and change Custom Class to your RaisedTabBarController subclass.
 
 ```swift
 import UIKit
@@ -52,7 +52,7 @@ class ViewController: RaisedTabBarController {
         self.insertEmptyTabItem("", atIndex: 2)
         
         // Raise the center button with image
-        var img = UIImage(named: "icon_camera")
+        let img = UIImage(named: "icon_camera")
         self.addRaisedButton(img, highlightImage: nil)
     }
     
@@ -60,10 +60,8 @@ class ViewController: RaisedTabBarController {
     override func onRaisedButton(sender: UIButton!) {
     	super.onRaisedButton(sender)
 
-        println("Center button tapped")
+        println("Raised button tapped")
     }
 
 }
 ```
-
-To link to storyboard, drag a new TabBarController into the storyboard and change Custom Class to your ViewController.
