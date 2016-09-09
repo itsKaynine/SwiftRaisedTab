@@ -20,7 +20,7 @@ class ViewController: RaisedTabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Insert empty tab item at center index. In this case we have 5 tabs.
@@ -32,7 +32,7 @@ class ViewController: RaisedTabBarController {
     }
     
     // Handler for raised button
-    override func onRaisedButton(sender: UIButton!) {
+    override func onRaisedButton(_ sender: UIButton!) {
         super.onRaisedButton(sender)
         
         print("Raised button tapped")

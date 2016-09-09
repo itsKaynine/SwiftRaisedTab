@@ -175,9 +175,11 @@
 				TargetAttributes = {
 					77F4940E1BB204120012740F = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 					77F494231BB204130012740F = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 						TestTargetID = 77F4940E1BB204120012740F;
 					};
 				};
@@ -358,6 +360,7 @@
 				INFOPLIST_FILE = SwiftRaisedTabDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -368,6 +371,7 @@
 				INFOPLIST_FILE = SwiftRaisedTabDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -386,6 +390,7 @@
 				INFOPLIST_FILE = SwiftRaisedTabDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRaisedTabDemo.app/SwiftRaisedTabDemo";
 			};
 			name = Debug;
@@ -401,6 +406,7 @@
 				INFOPLIST_FILE = SwiftRaisedTabDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftRaisedTabDemo.app/SwiftRaisedTabDemo";
 			};
 			name = Release;
