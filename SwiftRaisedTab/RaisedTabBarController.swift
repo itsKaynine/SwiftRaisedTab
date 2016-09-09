@@ -8,27 +8,27 @@
 
 import UIKit
 
-public class RaisedTabBarController: UITabBarController {
-    override public func viewDidLoad() {
+open class RaisedTabBarController: UITabBarController {
+    override open func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    public func insertEmptyTabItem(title: String, atIndex: Int) {
+    open func insertEmptyTabItem(_ title: String, atIndex: Int) {
         let vc = UIViewController()
         vc.tabBarItem = UITabBarItem(title: title, image: nil, tag: 0)
-        vc.tabBarItem.enabled = false
+        vc.tabBarItem.isEnabled = false
         
-        self.viewControllers?.insert(vc, atIndex: atIndex)
+        self.viewControllers?.insert(vc, at: atIndex)
     }
     
-    public func addRaisedButton(buttonImage: UIImage?, highlightImage: UIImage?) {
+    open func addRaisedButton(_ buttonImage: UIImage?, highlightImage: UIImage?) {
         if let buttonImage = buttonImage {
-            let button = UIButton(type: UIButtonType.Custom)
-            button.autoresizingMask = [UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleTopMargin]
+            let button = UIButton(type: UIButtonType.custom)
+            button.autoresizingMask = [UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin, UIViewAutoresizing.flexibleTopMargin]
             
-            button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height)
-            button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
-            button.setBackgroundImage(highlightImage, forState: UIControlState.Highlighted)
+            button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width, height: buttonImage.size.height)
+            button.setBackgroundImage(buttonImage, for: UIControlState())
+            button.setBackgroundImage(highlightImage, for: UIControlState.highlighted)
             
             let heightDifference = buttonImage.size.height - self.tabBar.frame.size.height
             
@@ -42,12 +42,12 @@ public class RaisedTabBarController: UITabBarController {
                 button.center = center
             }
             
-            button.addTarget(self, action: "onRaisedButton:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action: #selector(RaisedTabBarController.onRaisedButton(_:)), for: UIControlEvents.touchUpInside)
             self.view.addSubview(button)
         }
     }
     
-    public func onRaisedButton(sender: UIButton!) {
+    open func onRaisedButton(_ sender: UIButton!) {
         
     }
 }
