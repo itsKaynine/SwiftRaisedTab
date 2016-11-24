@@ -1,5 +1,7 @@
 # SwiftRaisedTab
 
+UPDATED FOR Swift 3.0
+
 Based on this blog post:   
 [http://idevrecipes.com/2010/12/16/raised-center-tab-bar-button](http://idevrecipes.com/2010/12/16/raised-center-tab-bar-button)
 
@@ -13,14 +15,14 @@ Install CocoaPods using the following command.
 $ gem install cocoapods
 ```
 
-Add the following to your Podfile.
+Add the following to your Podfile (use 0.2.0 for Swift 2.0).
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'SwiftRaisedTab', '~> 0.2.0'
+pod 'SwiftRaisedTab', '~> 0.3.0'
 ```
 
 ## Usage
@@ -45,7 +47,7 @@ class ViewController: RaisedTabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Insert empty tab item at center index. In this case we have 5 tabs.
@@ -57,7 +59,7 @@ class ViewController: RaisedTabBarController {
     }
     
     // Handler for raised button
-    override func onRaisedButton(sender: UIButton!) {
+    override func onRaisedButton(_ sender: UIButton!) {
     	super.onRaisedButton(sender)
 
         println("Raised button tapped")
