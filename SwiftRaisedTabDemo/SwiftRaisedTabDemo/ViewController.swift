@@ -28,7 +28,7 @@ class ViewController: RaisedTabBarController {
         
         // Raise the center button with image
         let img = UIImage(named: "icon_camera")
-        self.addRaisedButton(img, highlightImage: nil)
+        self.addRaisedButton(img, highlightImage: nil, offset: -10.0)
     }
     
     // Handler for raised button
