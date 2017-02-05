@@ -67,3 +67,9 @@ class ViewController: RaisedTabBarController {
 
 }
 ```
+
+## Advanced Usage
+Specify RaisedButton Offset
+```swift
+self.addRaisedButton(img, highlightImage: nil, offset: -10.0)
+```

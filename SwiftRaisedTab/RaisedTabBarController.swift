@@ -9,6 +9,7 @@
 import UIKit
 
 open class RaisedTabBarController: UITabBarController {
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +22,7 @@ open class RaisedTabBarController: UITabBarController {
         self.viewControllers?.insert(vc, at: atIndex)
     }
     
-    open func addRaisedButton(_ buttonImage: UIImage?, highlightImage: UIImage?) {
+    open func addRaisedButton(_ buttonImage: UIImage?, highlightImage: UIImage?, offset:CGFloat? = nil) {
         if let buttonImage = buttonImage {
             let button = UIButton(type: UIButtonType.custom)
             button.autoresizingMask = [UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin, UIViewAutoresizing.flexibleTopMargin]
@@ -39,6 +40,14 @@ open class RaisedTabBarController: UITabBarController {
                 var center = self.tabBar.center
                 center.y -= heightDifference / 2.0
                 
+                button.center = center
+            }
+            
+            if offset != nil
+            {
+                //Add offset
+                var center = button.center
+                center.y = center.y + offset!
                 button.center = center
             }
             
